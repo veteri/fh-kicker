@@ -1,0 +1,19 @@
+{
+  "name": "fh-kicker",
+  "version": "1.0.0",
+  "description": "Participate in kicker matches with and against your friends and track your progress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veteri/fh-kicker.git"
+  },
+  "author": "Marten Manthey, Dominique Narbel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veteri/fh-kicker/issues"
+  },
+  "homepage": "https://github.com/veteri/fh-kicker#readme"
+}
