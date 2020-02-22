@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/veteri/fh-kicker/issues"
   },
-  "homepage": "https://github.com/veteri/fh-kicker#readme"
+  "homepage": "https://github.com/veteri/fh-kicker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
