@@ -3,25 +3,25 @@
 ## Features
 
 * Profile
-    ..* Registration
-    ..* Verification
-    ..* Rank Display
-    ..* Match history
-    ..* ELO
-    ..* Preferred Position
+    ** Registration
+    ** Verification
+    ** Rank Display
+    ** Match history
+    ** ELO
+    ** Preferred Position
 * Ladder
-    ..* Live (updates automatically)
+    ** Live (updates automatically)
 * Teams
 * Kicker free?
 * Queueing / Matchmaking
-    ..* as Team or as Player
+    ** as Team or as Player
 * New Game
-    ..* GO -> Kicker reserved
-    ..* Team vs Team
-    ..* PUGs 
-    ..* Players vs Players
-    ..* Best of 1; First to 10 Points
-    ..* Submit Game
+    ** GO -> Kicker reserved
+    ** Team vs Team
+    ** PUGs 
+    ** Players vs Players
+    ** Best of 1; First to 10 Points
+    ** Submit Game
 
 * Tournament Modus
 
