@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+
     mode: "development",
     /* This will watch for file changes and compile to dist, but doesnt allow dev server ... */
     //watch: true,
@@ -11,7 +12,7 @@ module.exports = {
     devtool: "source-map",
     module: {
         rules: [
-            { test: /\.css$/, use: ["style-loader", "css-loader"] },
+            {test: /\.css$/, use: ["style-loader", "css-loader"]},
         ]
     },
     plugins: [
@@ -30,8 +31,8 @@ module.exports = {
         proxy: {
             "/api": {
                 target: "http://localhost:28961",
-                pathRewrite: { "^/api": "" },
-                bypass: function(req, res) {
+                pathRewrite: {"^/api": ""},
+                bypass: function (req, res) {
                     console.log("Proxying request..." + req.path);
                 }
             }

@@ -1,7 +1,9 @@
+const { isValidMatNr } = require("./src/Server/helper");
 const express = require("express");
-const app = express();
-const path = require('path');
+const path = require("path");
 const bodyParser = require("body-parser");
+
+const app = express();
 
 //Support JSON
 app.use(bodyParser.json());
@@ -18,11 +20,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/register-user", (req, res) => {
-    const { email } = req.body;
+    const { matNr } = req.body;
 
-    //TODO validate Data
-
-    if (email) {
+    if (email && isValidMatNr(matNr)) {
         console.log(`Sending activation e-mail to ${req.body.email}`);
         //TODO Actually register user 
         res.json({ success: true });

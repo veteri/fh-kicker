@@ -1,4 +1,4 @@
-export function isValidMatNr(matNr) {
+function isValidMatNr(matNr) {
     const degrees = [
         "inf",
         "minf",
@@ -15,3 +15,7 @@ export function isValidMatNr(matNr) {
 
     return (new RegExp(`${degreesPrefix}10\\d{4}`, "i")).test(matNr);
 }
+
+module.exports = {
+    isValidMatNr
+};
