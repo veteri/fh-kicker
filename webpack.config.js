@@ -38,6 +38,6 @@ module.exports = {
         },
 
         /* Allows access from any machine in local network for cool dev experience */
-        host: "0.0.0.0"
+        //host: "0.0.0.0"
     }
 };
