@@ -1,4 +1,5 @@
 import "../css/style.css";
+import { isValidMatNr } from "./helper.js";
 
 /* Set this to true if you  
 are working with webpack */
@@ -33,28 +34,31 @@ const registration = {
      * @returns {undefined}
      */
     async registrationHandler() {
-        const data = {
-            email: `${this.DOM.matrikelInput.value}@fh-wedel.de`
-        };
 
-        console.log(`Sending to ${this.PATH} -> ${JSON.stringify(data)}`);
+        if (isValidMatNr(this.DOM.matrikelInput.value)) {
+            const data = {
+                email: `${this.DOM.matrikelInput.value}@fh-wedel.de`
+            };
 
-        const response = await fetch(this.PATH, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
+            console.log(`Sending to ${this.PATH} -> ${JSON.stringify(data)}`);
 
-        const responseData = await response.json();
+            const response = await fetch(this.PATH, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
 
-        if (responseData.success) {
-            //Notify user of success
-            console.info("[DEBUG] Registration success");
-        } else {
-            //Notify user of error
-            console.error("[DEBUG] Registration error");
+            const responseData = await response.json();
+
+            if (responseData.success) {
+                //Notify user of success
+                console.info("[DEBUG] Registration success");
+            } else {
+                //Notify user of error
+                console.error("[DEBUG] Registration error");
+            }
         }
     },
 
