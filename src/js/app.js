@@ -1,5 +1,5 @@
 import "../css/style.css";
-import { isValidMatNr } from "./helper.js";
+import {isValidMatNr} from "./helper.js";
 
 /* Set this to true if you  
 are working with webpack */
@@ -37,7 +37,7 @@ const registration = {
 
         if (isValidMatNr(this.DOM.matrikelInput.value)) {
             const data = {
-                email: `${this.DOM.matrikelInput.value}@fh-wedel.de`
+                matNr: `${this.DOM.matrikelInput.value}`
             };
 
             console.log(`Sending to ${this.PATH} -> ${JSON.stringify(data)}`);
